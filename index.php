@@ -3,6 +3,7 @@
         $target = "numbers.txt";
         $target_file = __DIR__.'/'.$target;
         echo $target_file;
+        echo $_POST["number"];
         file_put_contents($target_file, "\r\n".$_POST["number"], FILE_APPEND);
         echo "You're all set!";
     }
@@ -12,7 +13,7 @@
 <html>
 <head>
 <title>Sefira Bot</title>
-<link href="/home/fa18/313/adeh6562/public_html/sefira_bot/Sefira-Bot/sefira.css" rel="stylesheet" type="text/css">
+<link href=<?php echo __DIR__.'/sefira.css'; ?> rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700" rel="stylesheet">
 </head>
 <body>
