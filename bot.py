@@ -56,13 +56,16 @@ def run():
         lines = f.readlines()
         for line in lines:
             send_message_to(message, line)
+    update_timer()
 
 
-def update_timer():
+def update_timer(bootstrapped=False):
     x = datetime.today()
 
+    day = x.day if bootstrapped else x.day+1
+
     y = x.replace(
-        day= x.day+1,
+        day= day,
         hour=20, 
         minute=0, 
         second=0, 
