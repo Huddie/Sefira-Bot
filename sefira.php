@@ -1,7 +1,7 @@
 <?php
     if (isset($_POST["submit"])){
-        $target_dir = "numbers.txt";
-        $target_file = dirname(__DIR__).'/'.$target_file;
-        echo ''.$_POST["number"].' >> '.$target_file
+        $target = "numbers.txt";
+        $target_file = __DIR__.'/'.$target;
+        file_put_contents($target_file, $_POST["number"], FILE_APPEND);
     }
 ?>
