@@ -2,8 +2,6 @@
     if (isset($_POST["submit"])){
         $target = "numbers.txt";
         $target_file = __DIR__.'/'.$target;
-        echo $target_file;
-        echo $_POST["number"];
         file_put_contents($target_file, "\r\n".$_POST["number"], FILE_APPEND);
         echo "You're all set!";
     }
