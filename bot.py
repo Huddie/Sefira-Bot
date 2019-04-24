@@ -82,3 +82,4 @@ def bootstrap():
     update_timer()
 
 bootstrap()
+print(os.getenv('TWILIO_ACCOUNT_SID'))
