@@ -81,5 +81,6 @@ def update_timer(bootstrapped=False):
 def bootstrap():
     update_timer()
 
-bootstrap()
+os.system('source /home/fa18/313/adeh6562/public_html/sefira_bot/Sefira-Bot/.env')
 print(os.getenv('TWILIO_ACCOUNT_SID'))
+bootstrap()
