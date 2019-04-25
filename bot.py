@@ -2,6 +2,7 @@ import os
 import requests
 from datetime import datetime
 from threading import Timer
+import time
 
 numbers_list_file = "numbers.txt"
 timer = None
@@ -58,6 +59,7 @@ def run():
         lines = f.readlines()
         for line in lines:
             send_message_to(message, line)
+            time.sleep(2)
     update_timer()
 
 
@@ -69,7 +71,7 @@ def update_timer(bootstrapped=False):
     y = x.replace(
         day=day,
         hour=20, 
-        minute=32, 
+        minute=36, 
         second=0, 
         microsecond=0
     )
