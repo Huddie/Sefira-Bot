@@ -44,7 +44,7 @@ def send_message_to(message, number):
             '{0}'.format(os.getenv('TWILIO_AUTH_TOKEN'))
         )
     )
-    print(response.text)
+    print(response)
 
 def calculate_day():
     start = datetime(2019, 4, 21, 20, 0, 0)
@@ -57,7 +57,6 @@ def run():
     with open(numbers_list_file) as f:
         lines = f.readlines()
         for line in lines:
-            print(line)
             send_message_to(message, line)
     update_timer()
 
@@ -82,8 +81,6 @@ def update_timer(bootstrapped=False):
     timer.start()
 
 def bootstrap():
-    run()
-    # update_timer(True)
+    update_timer()
 
-os.system('source /home/fa18/313/adeh6562/public_html/sefira_bot/Sefira-Bot/.env')
 bootstrap()
