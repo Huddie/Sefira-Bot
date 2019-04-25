@@ -45,7 +45,7 @@ def send_message_to(message, number):
             '{0}'.format(os.getenv('TWILIO_AUTH_TOKEN'))
         )
     )
-    print(response)
+    print(response.text)
 
 def calculate_day():
     start = datetime(2019, 4, 21, 20, 0, 0)
@@ -71,7 +71,7 @@ def update_timer(bootstrapped=False):
     y = x.replace(
         day=day,
         hour=20, 
-        minute=36, 
+        minute=41, 
         second=0, 
         microsecond=0
     )
