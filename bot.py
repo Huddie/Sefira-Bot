@@ -69,7 +69,7 @@ def update_timer(bootstrapped=False):
     y = x.replace(
         day=day,
         hour=20, 
-        minute=0, 
+        minute=32, 
         second=0, 
         microsecond=0
     )
@@ -81,6 +81,6 @@ def update_timer(bootstrapped=False):
     timer.start()
 
 def bootstrap():
-    update_timer()
+    update_timer(True)
 
 bootstrap()
