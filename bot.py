@@ -69,7 +69,7 @@ def update_timer(bootstrapped=False):
     y = x.replace(
         day=day,
         hour=20, 
-        minute=9, 
+        minute=11, 
         second=0, 
         microsecond=0
     )
