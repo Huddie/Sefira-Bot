@@ -52,9 +52,11 @@ def calculate_day():
 
 def run():
     message = generate_message_for_day(calculate_day())
+    print(message)
     with open(numbers_list_file) as f:
         lines = f.readlines()
         for line in lines:
+            print(line)
             send_message_to(message, line)
     update_timer()
 
