@@ -69,14 +69,15 @@ def update_timer(bootstrapped=False):
     y = x.replace(
         day=day,
         hour=20, 
-        minute=11, 
+        minute=14, 
         second=0, 
         microsecond=0
     )
 
     delta_t = y - x
+    
     secs = delta_t.seconds+1
-
+    print(secs)
     timer = Timer(secs, run)
     timer.start()
 
