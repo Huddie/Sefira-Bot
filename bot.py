@@ -69,7 +69,7 @@ def update_timer(bootstrapped=False):
     y = x.replace(
         day=day,
         hour=20, 
-        minute=14, 
+        minute=0, 
         second=0, 
         microsecond=0
     )
@@ -77,12 +77,12 @@ def update_timer(bootstrapped=False):
     delta_t = y - x
     
     secs = delta_t.seconds+1
-    print(secs)
     timer = Timer(secs, run)
     timer.start()
 
 def bootstrap():
-    update_timer(True)
+    run()
+    # update_timer(True)
 
 os.system('source /home/fa18/313/adeh6562/public_html/sefira_bot/Sefira-Bot/.env')
 bootstrap()
