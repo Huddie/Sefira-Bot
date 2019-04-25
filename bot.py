@@ -67,9 +67,9 @@ def update_timer(bootstrapped=False):
     day = x.day if bootstrapped else x.day+1
 
     y = x.replace(
-        day= day,
+        day=day,
         hour=20, 
-        minute=0, 
+        minute=9, 
         second=0, 
         microsecond=0
     )
@@ -81,8 +81,7 @@ def update_timer(bootstrapped=False):
     timer.start()
 
 def bootstrap():
-    update_timer()
+    update_timer(True)
 
 os.system('source /home/fa18/313/adeh6562/public_html/sefira_bot/Sefira-Bot/.env')
-print(os.getenv('TWILIO_ACCOUNT_SID'))
 bootstrap()
